@@ -170,7 +170,7 @@ showbtn.addEventListener('click', show);
 hidebtn.addEventListener('click', hide);
 popup.addEventListener('click', remove);
 
-// contact form
+// contact form validation
 
 function showPopup() {
   const form = document.getElementById('contact-form');
