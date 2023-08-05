@@ -193,6 +193,5 @@ function showPopup() {
       }, 3000);
     }
   });
-  
 }
 showPopup();
