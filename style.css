@@ -567,8 +567,8 @@ textarea {
 .contact-btn:active {
   background-color: var(--color14);
 }
-
-/* #toolbar .navbar {
+   /* chanage and modified nec */
+#toolbar .navbar {
   display: none;
 }
 
@@ -584,7 +584,7 @@ textarea {
   backdrop-filter: blur(5px);
 } */
 
-/* #toolbar nav ul.active li:first-of-type {
+ #toolbar nav ul.active li:first-of-type {
   padding-top: 30px;
 }
 
@@ -594,8 +594,8 @@ textarea {
   color: var(--white);
   font-size: 32px;
   cursor: pointer;
-} */
-
+}
+  /* from here tmm */
 /* desktop versions */
 @media only screen and (min-width: 768px) {
   #toolbar {
