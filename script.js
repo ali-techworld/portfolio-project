@@ -187,7 +187,12 @@ function showPopup() {
     } else {
       errorMessage.textContent = 'Please enter the email address in lowercase.';
       errorMessage.style.display = 'block';
+
+      setTimeout(() => {
+        errorMessage.style.display = 'none';
+      }, 3000);
     }
   });
+  
 }
 showPopup();
