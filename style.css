@@ -249,9 +249,6 @@ ul {
 .card-works .card .img {
   width: 295px;
   height: 220px;
-}
-
-.card-works .card .img {
   background-image: url('./Icons/Snapshoot Portfolio.png');
   background-repeat: no-repeat;
 }

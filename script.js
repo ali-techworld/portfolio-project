@@ -52,8 +52,8 @@ const workdata = [
     des1: 'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.',
     des2: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
     languages: ['html', 'Ruby on rails', 'css', 'javascript'],
-    liveLink: '',
-    sourceLink: '',
+    liveLink: 'https://ali-techworld.github.io/portfolio-project/',
+    sourceLink: 'https://github.com/ali-techworld/portfolio-project/tree/AddPopUp',
   },
 ];
 
