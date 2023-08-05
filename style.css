@@ -38,14 +38,14 @@ textarea {
   font-family: "Poppins", sans-serif;
 }
 
-#navbar {
+#toolbar {
   width: 100%;
   justify-content: space-between;
   padding: 30px;
   background-color: var(--white);
 }
 
-#navbar nav {
+#toolbar nav {
   width: 100%;
 }
 
@@ -57,12 +57,19 @@ ul {
   list-style-type: none;
 }
 
-#navbar nav ul {
+#toolbar nav ul {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
 }
 
+.details .details-links a {
+  width: 45%;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.details .web-languages li,
 .card-works .card .card-description .web-languages li {
   display: grid;
   grid-template-rows: repeat(1, 1fr);
@@ -98,17 +105,39 @@ ul {
   padding: 10px;
 }
 
+.details .web-languages li a,
 .card-works .card .card-description .web-languages li a {
   text-decoration: none;
+  color: var(--color16);
 }
 
-#navbar nav ul li button {
+.details .details-links a button {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px 18px;
+  background-color: transparent;
+  border: 1px solid var(--color16);
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--color13);
+  text-align: center;
+  cursor: pointer;
+}
+
+#toolbar nav ul li button {
   border: none;
   outline: none;
   background-color: transparent;
 }
 
-#navbar nav ul li a {
+#toolbar nav ul li a {
   text-decoration: none;
   text-transform: capitalize;
   color: var(--primary-1);
@@ -119,7 +148,7 @@ ul {
   line-height: 20px;
 }
 
-#navbar .active li a {
+#toolbar .active li a {
   color: var(--white);
   font-weight: 600;
   font-size: 32px;
@@ -131,7 +160,7 @@ ul {
   padding-left: 0;
 }
 
-#navbar nav ul.nav li a {
+#toolbar nav ul.nav li a {
   font-weight: 900;
 }
 
@@ -203,28 +232,26 @@ ul {
   color: var(--primary-1);
 }
 
-.card-works {
+.card-works .card {
   width: 90%;
   margin: auto;
   display: grid;
-  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   margin-top: 120px;
   gap: 50px;
   padding: 20px;
   background-color: var(--white);
   border-radius: 16px;
   border: 1px solid var(--color12);
-}
-
-.card-works .card {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
 }
 
 .card-works .card .img {
   width: 295px;
   height: 220px;
+}
+
+.card-works .card .img {
   background-image: url('./Icons/Snapshoot Portfolio.png');
   background-repeat: no-repeat;
 }
@@ -248,12 +275,15 @@ ul {
   line-height: 44px;
 }
 
+.details .subheading,
 .card-works .card .card-description .subheading {
   display: flex;
   align-items: center;
   gap: 12px;
+  padding: 5px;
 }
 
+.details .subheading .canopy,
 .card-works .card .card-description .subheading .canopy {
   color: var(--color3);
   font-family: 'Poppins', sans-serif;
@@ -264,6 +294,7 @@ ul {
   text-transform: uppercase;
 }
 
+.details .subheading .subheading-list,
 .card-works .card .card-description .subheading .subheading-list {
   color: var(--color18);
   font-family: 'Poppins', sans-serif;
@@ -283,8 +314,10 @@ ul {
   line-height: 24px;
 }
 
+.details .web-languages,
 .card-works .card .card-description .web-languages {
   display: flex;
+  flex-wrap: wrap;
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -464,7 +497,6 @@ ul {
   margin-right: 0;
   align-items: center;
   justify-content: flex-start;
-  max-width: 60vw;/* padding: auto; */
   width: 100px;
   right: 80px !important;
 }
@@ -565,11 +597,11 @@ textarea {
   background-color: var(--color14);
 }
 
-#navbar .navbar {
+#toolbar .navbar {
   display: none;
 }
 
-#navbar .active {
+#toolbar .active {
   display: block;
   background-color: rgba(96, 112, 255, 0.9);
   position: fixed;
@@ -581,7 +613,7 @@ textarea {
   backdrop-filter: blur(5px);
 }
 
-#navbar nav ul.active li:first-of-type {
+#toolbar nav ul.active li:first-of-type {
   padding-top: 30px;
 }
 
@@ -593,8 +625,78 @@ textarea {
   cursor: pointer;
 }
 
+.project-detail {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(226, 219, 219, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+}
+
+.project-detail .details {
+  width: 90%;
+  height: 95vh;
+  background-color: #fff;
+  margin: auto;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.details h1.details-title {
+  display: inline;
+  font-family: 'Poppins', sans-serif;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px;
+  text-transform: capitalize;
+  color: var(--color2);
+}
+
+.details .closePopup {
+  float: right;
+  margin-right: 10px;
+  margin-top: 5px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #67798b;
+}
+
+.details p.description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--color3);
+}
+
+.details .details-links {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+#error-message {
+  display: none;
+  color: red;
+}
+
+/* desktop versions */
 @media only screen and (min-width: 768px) {
-  #navbar {
+  #toolbar {
     display: inline-flex;
     justify-content: center;
     align-items: flex-start;
@@ -602,20 +704,25 @@ textarea {
     gap: 670px;
   }
 
-  #navbar nav {
+  #toolbar nav {
     background-color: transparent;
   }
 
-  #navbar nav .menu-icon {
+  #toolbar nav .menu-icon {
     display: none;
   }
 
-  #navbar nav ul.navbar {
+  .details-right .details-links a {
+    width: 100%;
+    margin-right: 20px;
+  }
+
+  #toolbar nav ul.navbar {
     display: flex;
     justify-content: space-evenly;
   }
 
-  #navbar nav ul.active li {
+  #toolbar nav ul.active li {
     display: flex;
     padding: 0 20px;
     font-weight: 600;
@@ -633,13 +740,13 @@ textarea {
     margin: 10px 0;
   }
 
-  #navbar nav ul.navbar li:nth-of-type(2n),
-  #navbar nav ul.navbar li:nth-of-type(3) {
+  #toolbar nav ul.navbar li:nth-of-type(2n),
+  #toolbar nav ul.navbar li:nth-of-type(3) {
     padding-left: 30px;
     font-weight: 500;
   }
 
-  #navbar nav ul.navbar li a {
+  #toolbar nav ul.navbar li a {
     color: var(--color3);
   }
 
@@ -676,22 +783,27 @@ textarea {
     margin: 15px 0;
   }
 
-  /* card  do not touch */
+  /* card  */
 
-  /* .card-works {
+  .card-works .card {
     width: 90%;
     border: 1px solid var(--color7);
     border-radius: 24px;
-  }
-
-  .card-works .card {
-    flex-direction: row;
+    display: grid;
     justify-content: space-between;
     grid-template-columns: repeat(2, 2fr);
   }
 
+  .card-works .card:nth-child(even) {
+    direction: rtl;
+  }
+
+  .card-works .card:nth-child(odd) {
+    direction: ltr;
+  }
+
   .card-works .card .img {
-    width: 47%;
+    width: 100%;
     height: 448px;
     background-image: url('./Icons/desktop/1 Snapshoot Portfolio.png');
     background-repeat: no-repeat;
@@ -699,11 +811,40 @@ textarea {
     border-radius: 10px;
   }
 
+  .card-works .card .img-1 {
+    width: 47%;
+    height: 448px;
+    background-image: url('./Icons/desktop/2 Snapshoot Portfolio.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    order: 2;
+  }
+
+  .card-works .card .img-2 {
+    width: 47%;
+    height: 448px;
+    background-image: url('./Icons/desktop/3 Snapshoot Portfolio.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+  }
+
+  .card-works .card .img-3 {
+    width: 47%;
+    height: 448px;
+    background-image: url('./Icons/desktop/4 Snapshoot Portfolio.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    order: 2;
+  }
+
   .card-works .card .card-description {
-    width: 53%;
     height: 448px;
     gap: 18px;
     padding: 28px 30px;
+    direction: ltr;
   }
 
   .card-works .card .card-description .card-title {
@@ -737,7 +878,6 @@ textarea {
   .card-works .card .card-description .see-project {
     margin: 8px 0;
   }
- */
 
   /* about  */
   #about-myself {
@@ -817,5 +957,52 @@ textarea {
 
   .close {
     display: none;
+  }
+
+  .project-detail {
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(226, 219, 219, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(4px);
+    overflow: auto;
+  }
+
+  .project-detail .details {
+    width: 85%;
+    height: auto;
+    padding: 30px;
+    margin-top: 40px;
+  }
+
+  .details .close {
+    float: right;
+    margin-right: 10px;
+    margin-top: 5px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #67798b;
+    display: block;
+  }
+
+  .details .detail-img {
+    width: 100%;
+    height: 70vh;
+  }
+
+  .details .details-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .details-content .description {
+    width: 65%;
+  }
+
+  .details-right .details-links a button {
+    font-size: 12px;
   }
 }
