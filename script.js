@@ -170,7 +170,7 @@ showbtn.addEventListener('click', show);
 hidebtn.addEventListener('click', hide);
 popup.addEventListener('click', remove);
 
-// contact form
+// contact form validation
 
 function showPopup() {
   const form = document.getElementById('contact-form');
@@ -187,6 +187,10 @@ function showPopup() {
     } else {
       errorMessage.textContent = 'Please enter the email address in lowercase.';
       errorMessage.style.display = 'block';
+
+      setTimeout(() => {
+        errorMessage.style.display = 'none';
+      }, 3000);
     }
   });
 }
